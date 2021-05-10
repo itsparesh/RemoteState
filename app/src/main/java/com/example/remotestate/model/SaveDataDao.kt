@@ -9,6 +9,6 @@ interface SaveDataDao {
     @Insert
     fun insertSaveData(saveData: SaveData)
 
-    @Query("Select * from SaveData")
+    @Query("Select * from SaveData ORDER BY TimeStamp DESC")
     fun getSaveData(): List<SaveData>?
 }

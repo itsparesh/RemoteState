@@ -3,4 +3,7 @@
     <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="list">List</string>
+    <string name="time">Time: </string>
+    <string name="latitude">Lat: </string>
+    <string name="longitude">Long: </string>
 </resources>

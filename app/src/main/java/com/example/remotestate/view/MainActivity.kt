@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setRecyclerView() {
         locationRV?.layoutManager = LinearLayoutManager(this)
-        adapter = ListAdapter(object : ListAdapter.OnListItemClick {
+        adapter = ListAdapter(this, object : ListAdapter.OnListItemClick {
             override fun onListItemClicked(clickedItem: SaveData?) {
                 clickedItem?.latitude?.let {
                     loadPointsOnMap(it, clickedItem.longitude)
@@ -247,7 +247,6 @@ class MainActivity : AppCompatActivity() {
         private var handler: Handler? = null
         private var threadRunnable: Runnable? = null
         private var runnable: Runnable? = null
-        private var thread: Thread? = null
     }
 
     object RepeatHelper {
